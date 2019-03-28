@@ -6,6 +6,7 @@ public class GunScript : MonoBehaviour{
     public float damage = 10f;
     public float range = 100f;
     public GameObject ImpactEffect;
+    public AudioSource FireSound;
 
     public Camera fpsCam;
     public ParticleSystem MuzzleFlash;
@@ -15,6 +16,8 @@ public class GunScript : MonoBehaviour{
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+            FireSound.Play();
+            
 
         }
         
